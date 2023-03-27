@@ -1,4 +1,4 @@
-import react, { useCallback, useState } from "react"
+import react, { useCallback, useState, useSyncExternalStore } from "react"
 
 import "../Vehicledetails/Vehicledata.css";
 
@@ -6,8 +6,16 @@ export default function Data({ item }) {
 
     const [popup, setPopup] = useState(false)
 
+
+
+const close = (e)=>{
+
+setPopup(false)
+}
+
 const Toggle =()=>{
    setPopup(true)
+  
 }
 
 
@@ -28,8 +36,9 @@ const Toggle =()=>{
 
             {
                 popup? <div className="msg">
-                <h1>{item.MakeName}</h1>
-                <h1>{item.VehicleTypeName}</h1>
+                    <h6 onClick={(e)=>close(e)}>X</h6>
+                <h4>{item.MakeName}</h4>
+                <h4>{item.VehicleTypeName}</h4>
             </div>:null
             }
            
