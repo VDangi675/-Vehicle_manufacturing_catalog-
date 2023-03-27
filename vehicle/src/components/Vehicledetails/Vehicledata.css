@@ -1,0 +1,40 @@
+
+.ul{
+  display: flex;
+  
+  flex-direction: row;
+  width: 90%;
+  height: 40px;
+background-color: aqua;
+  position: relative;
+  left: 30px;
+}
+li{
+  list-style: none;
+  padding: 8px;
+  font-size: 20px;
+}
+#l-1{
+ 
+  position: absolute;
+  color: black;
+
+}
+#l-2{
+  position: absolute;
+  left:46%;
+  color: black;
+}
+#l-3{
+  position: absolute;
+  left:80%;
+  color: black;
+}
+
+.msg{
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 2px 2px gray;
+  border-radius: 10px;
+  margin: 5% auto;
+}
